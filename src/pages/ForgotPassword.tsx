@@ -101,7 +101,7 @@ const ForgotPassword = () => {
               </span>
             </Link>
             <p className="text-sm text-muted-foreground">
-              Remember your password?{" "}
+              <span className="hidden sm:inline">Remember your password?{" "}</span>
               <Link to="/signin" className="font-medium text-primary hover:underline transition-base">
                 Sign in
               </Link>

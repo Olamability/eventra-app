@@ -112,7 +112,7 @@ const GetStarted = () => {
               </span>
             </Link>
             <p className="text-sm text-muted-foreground">
-              Already have an account?{" "}
+              <span className="hidden sm:inline">Already have an account?{" "}</span>
               <Link to="/signin" className="font-medium text-primary hover:underline transition-base">
                 Sign in
               </Link>

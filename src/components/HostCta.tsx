@@ -24,7 +24,7 @@ const HostCta = () => (
 
       <div className="relative grid gap-0 lg:grid-cols-2">
         {/* Left: Copy */}
-        <div className="p-10 md:p-14">
+        <div className="p-8 md:p-12 lg:p-14">
           <span className="inline-flex items-center rounded-full border border-background/20 bg-background/10 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wider text-background/80">
             For organizers
           </span>
@@ -47,7 +47,7 @@ const HostCta = () => (
         </div>
 
         {/* Right: Feature tiles */}
-        <div className="flex flex-col justify-center gap-4 border-t border-background/10 p-10 md:p-14 lg:border-l lg:border-t-0">
+        <div className="flex flex-col justify-center gap-4 border-t border-background/10 p-8 md:p-12 lg:border-l lg:border-t-0 lg:p-14">
           {features.map((f) => (
             <div key={f.label} className="flex items-start gap-4">
               <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-background/10">

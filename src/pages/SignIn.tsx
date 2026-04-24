@@ -109,7 +109,7 @@ const SignIn = () => {
               </span>
             </Link>
             <p className="text-sm text-muted-foreground">
-              Don't have an account?{" "}
+              <span className="hidden sm:inline">Don't have an account?{" "}</span>
               <Link to="/get-started" className="font-medium text-primary hover:underline transition-base">
                 Sign up
               </Link>
