@@ -1,4 +1,4 @@
-# EventFlow Lite
+# Eventtra
 
 A modern, curated event browsing platform inspired by event products across Africa. Discover tech summits, music festivals, and business forums shaping the continent.
 
