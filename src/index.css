@@ -115,7 +115,7 @@
 }
 
 @layer utilities {
-  .bg-gradient-hero { background: var(--gradient-hero); }
+  .bg-gradient-hero { background-image: var(--gradient-hero); }
   .bg-gradient-card-overlay { background: var(--gradient-card); }
   .bg-gradient-subtle { background: var(--gradient-subtle); }
   .bg-gradient-mesh { background: var(--gradient-mesh); }
