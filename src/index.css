@@ -1,0 +1,152 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Eventra — premium SaaS design system. All colors HSL. */
+
+@layer base {
+  :root {
+    --background: 36 33% 98%;
+    --foreground: 20 30% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 20 30% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 20 30% 10%;
+
+    --primary: 16 90% 52%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 32 95% 60%;
+
+    --secondary: 30 25% 95%;
+    --secondary-foreground: 20 30% 10%;
+
+    --muted: 30 20% 95%;
+    --muted-foreground: 25 8% 45%;
+
+    --accent: 168 70% 36%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 30 18% 90%;
+    --input: 30 18% 90%;
+    --ring: 16 90% 52%;
+
+    --radius: 1.25rem;
+
+    --gradient-hero: linear-gradient(135deg, hsl(16 90% 52%) 0%, hsl(28 92% 58%) 50%, hsl(348 78% 56%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100% / 0) 35%, hsl(20 30% 8% / 0.92) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(36 33% 98%) 0%, hsl(30 25% 95%) 100%);
+    --gradient-mesh: radial-gradient(ellipse 80% 50% at 50% -20%, hsl(32 95% 60% / 0.25), transparent),
+                     radial-gradient(ellipse 60% 50% at 80% 100%, hsl(348 78% 56% / 0.15), transparent),
+                     radial-gradient(ellipse 60% 50% at 20% 100%, hsl(168 70% 36% / 0.12), transparent);
+
+    --shadow-xs: 0 1px 2px 0 hsl(20 30% 10% / 0.04);
+    --shadow-sm: 0 2px 8px -2px hsl(20 30% 10% / 0.06), 0 1px 3px -1px hsl(20 30% 10% / 0.04);
+    --shadow-md: 0 12px 32px -12px hsl(20 30% 10% / 0.12), 0 4px 12px -4px hsl(20 30% 10% / 0.06);
+    --shadow-lg: 0 28px 60px -20px hsl(20 30% 10% / 0.18), 0 12px 24px -8px hsl(20 30% 10% / 0.08);
+    --shadow-glow: 0 20px 60px -15px hsl(16 90% 52% / 0.45);
+    --shadow-ring: 0 0 0 1px hsl(20 30% 10% / 0.04);
+
+    --transition-base: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    --transition-spring: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 20 25% 7%;
+    --foreground: 35 30% 96%;
+    --card: 20 25% 10%;
+    --card-foreground: 35 30% 96%;
+    --popover: 20 25% 10%;
+    --popover-foreground: 35 30% 96%;
+    --primary: 16 90% 58%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 32 95% 62%;
+    --secondary: 20 20% 15%;
+    --secondary-foreground: 35 30% 96%;
+    --muted: 20 20% 15%;
+    --muted-foreground: 30 10% 65%;
+    --accent: 168 70% 42%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 20 20% 18%;
+    --input: 20 20% 18%;
+    --ring: 16 90% 58%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "ss01", "cv11", "cv02";
+    letter-spacing: -0.011em;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-display tracking-tight;
+    letter-spacing: -0.025em;
+  }
+
+  h1 { letter-spacing: -0.04em; }
+}
+
+@layer utilities {
+  .bg-gradient-hero { background: var(--gradient-hero); }
+  .bg-gradient-card-overlay { background: var(--gradient-card); }
+  .bg-gradient-subtle { background: var(--gradient-subtle); }
+  .bg-gradient-mesh { background: var(--gradient-mesh); }
+
+  .shadow-xs { box-shadow: var(--shadow-xs); }
+  .shadow-soft { box-shadow: var(--shadow-sm); }
+  .shadow-elevated { box-shadow: var(--shadow-md); }
+  .shadow-elegant { box-shadow: var(--shadow-lg); }
+  .shadow-glow { box-shadow: var(--shadow-glow); }
+  .shadow-ring { box-shadow: var(--shadow-ring); }
+
+  .transition-base { transition: var(--transition-base); }
+  .transition-smooth { transition: var(--transition-smooth); }
+  .transition-spring { transition: var(--transition-spring); }
+
+  .text-balance { text-wrap: balance; }
+  .text-pretty { text-wrap: pretty; }
+
+  /* Custom scrollbar for webkit */
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: hsl(var(--border)); border-radius: 99px; }
+  ::-webkit-scrollbar-thumb:hover { background: hsl(var(--muted-foreground) / 0.4); }
+
+  .noise-overlay::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.04;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+}
