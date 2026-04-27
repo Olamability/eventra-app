@@ -62,7 +62,7 @@ const Browse = () => {
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
                 placeholder="Search events, cities, organizers…"
-                className="border-0 bg-transparent text-base text-foreground shadow-none focus-visible:ring-0"
+                className="min-w-0 flex-1 border-0 bg-transparent text-base text-foreground shadow-none focus-visible:ring-0"
                 aria-label="Search events"
               />
               {query && (

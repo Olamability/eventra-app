@@ -112,7 +112,7 @@ const About = () => {
 
       {/* Mission */}
       <section className="container py-6 md:py-10">
-        <div className="relative mx-auto max-w-3xl rounded-3xl bg-foreground p-10 text-center shadow-elegant md:p-14">
+        <div className="relative mx-auto max-w-3xl rounded-3xl bg-foreground p-7 text-center shadow-elegant md:p-10 lg:p-14">
           <div className="absolute inset-0 bg-gradient-mesh opacity-30 rounded-3xl pointer-events-none" />
           <h2 className="font-display text-3xl font-bold text-background md:text-4xl text-balance">
             Our mission
@@ -182,7 +182,7 @@ const About = () => {
 
       {/* CTA */}
       <section className="container pb-24">
-        <div className="relative overflow-hidden rounded-[2rem] bg-foreground p-10 text-center shadow-elegant md:p-16">
+        <div className="relative overflow-hidden rounded-[2rem] bg-foreground p-8 text-center shadow-elegant md:p-12 lg:p-16">
           <div className="absolute inset-0 bg-gradient-mesh opacity-50" />
           <div className="relative">
             <h3 className="font-display text-3xl font-bold text-background md:text-4xl text-balance">
@@ -191,14 +191,14 @@ const About = () => {
             <p className="mx-auto mt-4 max-w-lg text-base leading-relaxed text-background/70">
               Thousands of attendees and organizers are already building memorable experiences. You're next.
             </p>
-            <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
-              <Link to="/get-started">
-                <Button size="lg" className="rounded-full bg-background font-semibold text-foreground hover:bg-background/90">
+            <div className="mt-8 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center sm:justify-center">
+              <Link to="/get-started" className="sm:w-auto">
+                <Button size="lg" className="w-full rounded-full bg-background font-semibold text-foreground hover:bg-background/90 sm:w-auto">
                   Get started free
                 </Button>
               </Link>
-              <Link to="/browse">
-                <Button size="lg" variant="ghost" className="rounded-full font-semibold text-background hover:bg-background/10 hover:text-background">
+              <Link to="/browse" className="sm:w-auto">
+                <Button size="lg" variant="ghost" className="w-full rounded-full font-semibold text-background hover:bg-background/10 hover:text-background sm:w-auto">
                   Browse events
                 </Button>
               </Link>

@@ -91,7 +91,7 @@ const Pricing = () => {
 
       {/* Pricing cards */}
       <section className="container py-16 md:py-20">
-        <div className="grid gap-8 md:grid-cols-3 md:items-start">
+        <div className="grid gap-8 pt-4 md:grid-cols-3 md:items-start md:pt-6">
           {plans.map((plan) => (
             <div
               key={plan.name}

@@ -88,10 +88,6 @@ const Footer = () => (
       {/* Bottom bar */}
       <div className="mt-14 flex flex-col items-center justify-between gap-3 border-t border-border/50 pt-8 text-xs text-muted-foreground sm:flex-row">
         <span>© {new Date().getFullYear()} {APP_NAME} — Crafted with care in Africa.</span>
-        <span className="flex items-center gap-1">
-          Made with{" "}
-          <span className="mx-0.5 text-primary">♥</span> for the continent
-        </span>
       </div>
     </div>
   </footer>

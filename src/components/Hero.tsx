@@ -40,7 +40,7 @@ const Hero = ({ query, onQueryChange }: HeroProps) => {
             Live · 24 events this month
           </span>
 
-          <h1 className="mt-7 font-display text-5xl font-bold leading-[1.05] text-foreground text-balance md:text-6xl lg:text-7xl">
+          <h1 className="mt-7 font-display text-4xl font-bold leading-[1.05] text-foreground text-balance sm:text-5xl md:text-6xl lg:text-7xl">
             Discover events that
             <span className="block bg-gradient-hero bg-clip-text text-transparent">
               move the continent.
@@ -57,7 +57,7 @@ const Hero = ({ query, onQueryChange }: HeroProps) => {
               value={query}
               onChange={(e) => onQueryChange(e.target.value)}
               placeholder="Search events, cities, organizers…"
-              className="border-0 bg-transparent text-base text-foreground shadow-none focus-visible:ring-0"
+              className="min-w-0 flex-1 border-0 bg-transparent text-base text-foreground shadow-none focus-visible:ring-0"
               aria-label="Search events"
             />
             <Button size="sm" className="rounded-xl bg-foreground font-medium text-background hover:bg-foreground/90">

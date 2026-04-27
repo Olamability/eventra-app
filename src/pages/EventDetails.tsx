@@ -48,7 +48,6 @@ const EventDetails = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
-
       <div className="container pt-8">
         <Button asChild variant="ghost" size="sm" className="rounded-full text-muted-foreground hover:text-foreground">
           <Link to="/">
@@ -68,11 +67,11 @@ const EventDetails = () => {
             className="h-[44vh] w-full object-cover md:h-[60vh]"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-foreground/85 via-foreground/30 to-transparent" />
-          <div className="absolute inset-x-0 bottom-0 p-7 md:p-12">
+          <div className="absolute inset-x-0 bottom-0 p-5 sm:p-7 md:p-12">
             <span className="inline-flex items-center rounded-full bg-background/95 px-3 py-1 text-xs font-semibold text-foreground shadow-soft backdrop-blur">
               {event.category}
             </span>
-            <h1 className="mt-4 font-display text-4xl font-bold leading-[1.05] text-background text-balance md:text-6xl">
+            <h1 className="mt-4 font-display text-3xl font-bold leading-[1.05] text-background text-balance sm:text-4xl md:text-5xl lg:text-6xl">
               {event.title}
             </h1>
             <div className="mt-5 flex flex-wrap gap-x-6 gap-y-2 text-sm text-background/85">
@@ -84,7 +83,7 @@ const EventDetails = () => {
       </section>
 
       {/* Body */}
-      <section className="container py-16 md:py-24">
+      <section className="container pb-28 pt-16 md:pb-24 md:pt-24 lg:pb-24">
         <div className="grid gap-12 lg:grid-cols-[1fr_400px] lg:gap-16">
           <article className="animate-fade-in-up">
             <div className="flex items-center gap-3">
@@ -172,6 +171,23 @@ const EventDetails = () => {
           </aside>
         </div>
       </section>
+      {/* Mobile sticky register bar */}
+      <div className="fixed inset-x-0 bottom-0 z-30 border-t border-border/60 bg-background/95 p-4 backdrop-blur lg:hidden">
+        <Button
+          onClick={handleRegister}
+          disabled={registered}
+          size="lg"
+          className="h-12 w-full rounded-2xl bg-gradient-hero text-base font-semibold text-primary-foreground shadow-glow transition-spring hover:scale-[1.02] disabled:opacity-100 disabled:hover:scale-100"
+        >
+          {registered ? (
+            <>
+              <CheckCircle2 className="mr-2 h-5 w-5" /> You're registered
+            </>
+          ) : (
+            `Register — ${event.price}`
+          )}
+        </Button>
+      </div>
     </div>
   );
 };
